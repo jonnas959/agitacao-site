@@ -1,0 +1,137 @@
+/* ============================================================================
+   PÁGINA DE CAPTAÇÃO - Site\cadastro.html (aula experimental)
+
+   A página do LINK DE CAPTAÇÃO do Gestor (Gestão > Captação de clientes). Usa a
+   identidade do site (site.css); aqui fica só o que é desta página: a água de
+   fundo com o texto à esquerda e o cartão branco do formulário à direita, as
+   opções em chips, o aceite da LGPD e os três estados (formulário, "pronto,
+   recebemos" e link desativado).
+   ========================================================================== */
+
+.cad {
+  position: relative; isolation: isolate; overflow: hidden; color: var(--branco);
+  padding: calc(var(--topo-h) + clamp(28px, 5vw, 64px)) 0 clamp(48px, 7vw, 90px);
+  min-height: calc(100vh - 120px); min-height: calc(100svh - 120px);
+  background:
+    radial-gradient(60% 50% at 10% 92%, rgba(53, 200, 232, .42), transparent 72%),
+    linear-gradient(155deg, var(--noite) 0%, var(--noite-2) 52%, var(--violeta) 110%);
+}
+.cad > .agua-luzes { z-index: -1; opacity: .55; }
+
+.cad-grade { display: grid; gap: 30px; align-items: start; }
+
+/* ------------------------------------------------------------ o texto */
+.cad-texto .etiqueta { color: var(--piscina); }
+.cad-texto h1 { font-size: clamp(2.7rem, 5.6vw, 4.6rem); line-height: 1.02; margin-bottom: 16px; }
+.cad-sub { font-size: clamp(1.05rem, 1.4vw, 1.2rem); line-height: 1.5; max-width: 42ch; color: var(--branco); }
+.cad-lista { display: grid; gap: 12px; margin-top: 22px; }
+.cad-lista li { display: flex; align-items: flex-start; gap: 12px; font-size: 1rem; line-height: 1.45; }
+.cad-lista svg {
+  flex: none; width: 40px; height: 40px; padding: 8px; border-radius: 12px;
+  background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .22);
+  fill: none; stroke: var(--piscina); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+.cad-lista span { padding-top: 8px; min-width: 0; }
+
+/* ------------------------------------------------------------ o cartão */
+.cad-cartao {
+  position: relative; background: var(--branco); color: var(--texto); border-radius: var(--raio);
+  padding: clamp(22px, 3vw, 34px); box-shadow: 0 30px 60px -28px rgba(10, 9, 53, .85);
+}
+.cad-tit { font-size: clamp(1.5rem, 2.4vw, 1.9rem); margin-bottom: 2px; }
+.cad-tit-sub { color: var(--texto-2); margin-bottom: 6px; font-size: .96rem; }
+
+.cad-form { display: flex; flex-direction: column; gap: 14px; }
+/* o display acima venceria o [hidden] do navegador: os três estados trocam pelo hidden */
+.cad-form[hidden], .cad-estado[hidden], .cad-cartao .cad-falha[hidden] { display: none !important; }
+.cad-linha { display: grid; gap: 14px; }
+.cad-campo { display: flex; flex-direction: column; gap: 6px; min-width: 0; border: 0; padding: 0; margin: 0; }
+.cad-campo label, .cad-campo legend { font-size: .92rem; font-weight: 600; color: var(--texto); padding: 0; }
+.cad-campo label span, .cad-campo legend span { font-weight: 400; color: var(--texto-2); }
+.cad-campo input[type="text"], .cad-campo input[type="tel"], .cad-campo input[type="email"], .cad-campo textarea {
+  width: 100%; min-height: 48px; font: 500 16px/1.4 var(--fonte-texto); color: var(--texto);
+  background: var(--claro); border: 1.5px solid #C5C8E4; border-radius: 12px; padding: 11px 14px; outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease, background-color .15s ease;
+}
+.cad-campo input::placeholder, .cad-campo textarea::placeholder { color: #5D5D8C; opacity: 1; }
+.cad-campo textarea { resize: vertical; min-height: 72px; }
+.cad-campo input:hover, .cad-campo textarea:hover { border-color: #9EA2CF; }
+.cad-campo input:focus, .cad-campo textarea:focus {
+  border-color: var(--violeta); background: var(--branco); box-shadow: 0 0 0 4px rgba(64, 64, 152, .16);
+}
+.cad-campo.cad-invalido input, .cad-campo.cad-invalido textarea { border-color: #B91C1C; background: #FEF2F2; }
+.cad-erro { color: #B91C1C; font-size: .86rem; font-weight: 600; line-height: 1.35; }
+.cad-erro:empty { display: none; }
+.cad-conta { align-self: flex-end; color: var(--texto-2); font-size: .8rem; margin-top: -2px; font-variant-numeric: tabular-nums; }
+
+/* as opções em chips (rádio de verdade por baixo: teclado e leitor de tela) */
+.cad-opcoes legend { margin-bottom: 6px; }
+.cad-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.cad-chips label { position: relative; cursor: pointer; }
+.cad-chips input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+.cad-chips span {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px;
+  font-size: .96rem; font-weight: 600; color: var(--texto); background: var(--branco); border: 1.5px solid #C5C8E4;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease, transform .12s ease;
+}
+.cad-chips label:hover span { border-color: var(--violeta); }
+.cad-chips input:checked + span { background: var(--violeta); border-color: var(--violeta); color: var(--branco); }
+.cad-chips input:focus-visible + span { outline: 3px solid var(--violeta); outline-offset: 2px; }
+.cad-chips label:active span { transform: translateY(1px); }
+
+/* o aceite da LGPD */
+.cad-aceite {
+  display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; border-radius: 12px; cursor: pointer;
+  background: var(--claro); border: 1.5px solid var(--linha); font-size: .88rem; line-height: 1.5; color: var(--texto);
+}
+.cad-aceite input { flex: none; width: 22px; height: 22px; margin: 1px 0 0; accent-color: var(--violeta); cursor: pointer; }
+.cad-aceite.cad-invalido { border-color: #B91C1C; background: #FEF2F2; }
+
+/* a armadilha do robô: fora da tela (display:none alguns robôs pulam) */
+.cad-armadilha { position: absolute !important; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+
+.cad-enviar { width: 100%; margin-top: 2px; padding: 0 16px; }
+.cad-enviar[disabled] { opacity: .75; cursor: progress; transform: none; }
+.cad-enviar.enviando::after {
+  content: ''; width: 18px; height: 18px; border-radius: 50%;
+  border: 2.5px solid rgba(255, 255, 255, .45); border-top-color: var(--branco); animation: cadGira .8s linear infinite;
+}
+@keyframes cadGira { to { transform: rotate(360deg); } }
+.cad-cartao .cad-falha {
+  margin: 0; padding: 12px 14px; border-radius: 12px; background: #FEF2F2; border: 1px solid #FCA5A5;
+  color: #7F1D1D; font-size: .92rem; font-weight: 600; line-height: 1.45;
+}
+.cad-cartao .cad-falha a { color: #7F1D1D; text-decoration: underline; }
+
+/* ------------------------------------------------------------ pronto / link desativado */
+.cad-estado { text-align: center; padding: 16px 4px 6px; outline: none; }
+.cad-estado h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin: 18px 0 10px; }
+.cad-estado p { color: var(--texto-2); max-width: 40ch; margin: 0 auto 22px; font-size: 1.02rem; }
+.cad-estado-acoes { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.cad-selo {
+  display: inline-grid; place-items: center; width: 84px; height: 84px; border-radius: 50%;
+  background: var(--piscina-2); box-shadow: 0 18px 36px -16px rgba(14, 124, 155, .85);
+  animation: cadSelo .45s cubic-bezier(.25, .8, .25, 1) both;
+}
+.cad-selo svg { width: 42px; height: 42px; fill: none; stroke: var(--branco); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.cad-selo-off { background: var(--violeta); box-shadow: 0 18px 36px -16px rgba(20, 19, 74, .7); }
+@keyframes cadSelo { from { transform: scale(.6); opacity: 0; } }
+.cad-voltar { display: inline-flex; align-items: center; min-height: 44px; color: var(--violeta); font-weight: 600; font-size: .96rem; }
+.cad-voltar:hover { color: var(--noite); }
+.cad-cartao .cad-noscript { margin: 14px 0 0; color: var(--texto-2); font-size: .92rem; }
+
+/* no celular o botão flutuante cobriria os campos; o formulário já leva ao WhatsApp */
+.pagina-cadastro .zap-flutuante { display: none; }
+
+/* ------------------------------------------------------------ telas maiores */
+@media (min-width: 560px) {
+  .cad-linha { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 960px) {
+  .cad-grade { grid-template-columns: minmax(0, 1fr) minmax(0, 540px); gap: clamp(36px, 5vw, 72px); }
+  .cad-texto { padding-top: 12px; }
+  .pagina-cadastro .zap-flutuante { display: grid; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cad-enviar.enviando::after { animation: none !important; }
+}

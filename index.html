@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Agitação Esportes · Natação e esportes em Aracaju desde 1994</title>
+<meta name="description" content="Escola de natação e esportes em Aracaju/SE desde 1994. Natação, voleibol, handebol, basquete, funcional kids, eventos esportivos e aluguel. Agende sua aula experimental pelo WhatsApp.">
+<meta name="theme-color" content="#14134A">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Agitação Esportes">
+<meta property="og:title" content="Agitação Esportes · Natação e esportes em Aracaju desde 1994">
+<meta property="og:description" content="Atividades aquáticas e esportivas, aluguel, cursos e eventos.">
+<meta property="og:image" content="https://jonnas959.github.io/agitacao-site/img/marca-redonda.png">
+<link rel="icon" href="img/icone.png">
+<link rel="apple-touch-icon" href="img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/site.css?v=12">
+</head>
+<body>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============================ CABEÇALHO ============================ -->
+<header class="topo" id="topo">
+  <div class="container topo-in">
+    <a class="marca" href="#topo" aria-label="Agitação Esportes, início">
+      <img src="img/logo-branca.png" alt="" width="181" height="91">
+    </a>
+
+    <button class="hamburguer" id="btnMenu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#modalidades">Modalidades</a>
+      <a href="#unidades">Unidades</a>
+      <a href="#eventos">Eventos</a>
+      <!-- o Blog so aparece no menu depois que o Gestor publicar o primeiro post (js/site.js) -->
+      <a href="#blog" data-com-blog hidden>Blog</a>
+      <a href="#redes">Redes</a>
+      <a class="btn btn-piscina btn-menu" href="#aula">Aula experimental</a>
+      <a class="btn btn-vazado btn-menu" href="https://tecnofitacademia.page.link/App" data-area-aluno target="_blank" rel="noopener">Área do aluno</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ============================== HERO =============================== -->
+<!-- Piscina vista de cima, feita so de CSS e SVG: luz no fundo (img/agua-luz.webp, duas camadas
+     andando em sentidos diferentes), cordas de raia boiando (img/corda.svg) e ondas em camadas
+     no pe. Quem pediu menos movimento ve tudo isso parado. -->
+<section class="hero" id="inicio">
+  <div class="agua" aria-hidden="true">
+    <div class="agua-luzes"><i class="luz luz-1"></i><i class="luz luz-2"></i></div>
+    <div class="agua-raias"><i class="corda"></i><i class="corda"></i><i class="corda"></i><i class="corda"></i><i class="corda"></i></div>
+  </div>
+
+  <div class="container hero-in">
+    <div class="hero-txt">
+      <p class="hero-linha">Aracaju · Sergipe · Brasil</p>
+      <h1>Agitando a <span class="palavra-agua">água</span> de Aracaju desde 1994.</h1>
+      <p class="hero-sub">Atividades aquáticas e esportivas, aluguel, cursos e eventos.</p>
+      <div class="hero-acoes">
+        <a class="btn btn-piscina btn-grande" href="https://wa.me/message/5R76JUZZV2YIP1" data-zap target="_blank" rel="noopener">
+          <svg class="ico-zap" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-zap"/></svg>
+          Agendar aula experimental
+        </a>
+        <a class="btn btn-vazado btn-grande" href="#modalidades">Ver modalidades</a>
+      </div>
+    </div>
+
+    <!-- A boia: o logo real no centro; o anel e so desenho -->
+    <div class="boia" aria-hidden="true">
+      <i class="boia-eco"></i><i class="boia-eco"></i><i class="boia-eco"></i>
+      <div class="boia-corpo">
+        <svg class="boia-anel" viewBox="0 0 300 300">
+          <defs>
+            <path id="boiaArco" d="M150 150m-112 0a112 112 0 1 1 224 0a112 112 0 1 1-224 0"/>
+          </defs>
+          <circle class="boia-base" cx="150" cy="150" r="112"/>
+          <circle class="boia-faixa" cx="150" cy="150" r="112"/>
+          <text class="boia-texto"><textPath href="#boiaArco" startOffset="12.5%" text-anchor="middle">DESDE</textPath></text>
+          <text class="boia-texto"><textPath href="#boiaArco" startOffset="37.5%" text-anchor="middle">1994</textPath></text>
+          <text class="boia-texto"><textPath href="#boiaArco" startOffset="62.5%" text-anchor="middle">ARACAJU</textPath></text>
+          <text class="boia-texto"><textPath href="#boiaArco" startOffset="87.5%" text-anchor="middle">SERGIPE</textPath></text>
+        </svg>
+        <img class="boia-marca" src="img/marca-redonda.png" alt="" width="150" height="150">
+      </div>
+    </div>
+  </div>
+
+  <div class="ondas ondas-hero" aria-hidden="true"><i class="onda onda-c"></i><i class="onda onda-b"></i><i class="onda onda-e"></i><i class="onda onda-a"></i></div>
+</section>
+
+<!-- =========================== MODALIDADES ========================== -->
+<section class="secao secao-clara" id="modalidades">
+  <div class="container modalidades">
+    <div class="modalidades-cab">
+      <p class="etiqueta">Modalidades</p>
+      <h2>Escolha a sua raia.</h2>
+      <p class="secao-sub">Da piscina à quadra, são sete jeitos de entrar em movimento com a Agitação.</p>
+    </div>
+
+    <ol class="raias">
+      <li class="raia raia-agua">
+        <span class="raia-n" aria-hidden="true">1</span>
+        <svg class="raia-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="16.5" cy="6.8" r="2.3"/><path d="M4 12.2l5-3.6 3.2 2.6 3.3-1.6"/><path d="M2 16.2c2.5 0 2.5 1.8 5 1.8s2.5-1.8 5-1.8 2.5 1.8 5 1.8 2.5-1.8 5-1.8"/></svg>
+        <div class="raia-txt">
+          <h3>Natação</h3>
+          <p>Turmas para crianças, jovens e adultos.</p>
+          <ul class="niveis" aria-label="Níveis">
+            <li>Iniciante</li><li>Intermediário</li><li>Avançado</li>
+          </ul>
+        </div>
+        <p class="raia-onde"><b>Onde</b> Complexo, Iate Clube e ADEBE</p>
+        <a class="raia-ir" href="https://wa.me/message/5R76JUZZV2YIP1" data-zap target="_blank" rel="noopener" aria-label="Agendar aula experimental de natação">Agendar <span aria-hidden="true">&rarr;</span></a>
+      </li>
+
+      <li class="raia">
+        <span class="raia-n" aria-hidden="true">2</span>
+        <svg class="raia-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3c.6 3.7-.8 6.8-3.6 9.2M12 12c3.2-.8 6.3-.2 8.6 1.7M12 12c-1.2 3.2-3.3 5.7-6.2 6.9"/><path d="M4.2 7.5c2.6 2 5.3 3.3 7.8 4.5M15.5 3.7c.8 2.8.7 5.7-.3 8.4M20.4 9.5c-1.6 3.1-3.9 5.4-6.8 6.8"/></svg>
+        <div class="raia-txt">
+          <h3>Voleibol</h3>
+          <p>Escolinha de esportes.</p>
+        </div>
+        <p class="raia-onde"><b>Onde</b> Ginásio do Complexo</p>
+        <a class="raia-ir" href="https://wa.me/message/5R76JUZZV2YIP1" data-zap target="_blank" rel="noopener" aria-label="Agendar aula experimental de voleibol">Agendar <span aria-hidden="true">&rarr;</span></a>
+      </li>
+
+      <li class="raia">
+        <span class="raia-n" aria-hidden="true">3</span>
+        <svg class="raia-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20V5h18v15"/><path d="M3 10h18M3 15h18M9 5v15M15 5v15"/><circle cx="12" cy="17" r="3" class="cheio"/></svg>
+        <div class="raia-txt">
+          <h3>Handebol</h3>
+          <p>Escolinha de esportes.</p>
+        </div>
+        <p class="raia-onde"><b>Onde</b> Ginásio do Complexo</p>
+        <a class="raia-ir" href="https://wa.me/message/5R76JUZZV2YIP1" data-zap target="_blank" rel="noopener" aria-label="Agendar aula experimental de handebol">Agendar <span aria-hidden="true">&rarr;</span></a>
+      </li>
+
+      <li class="raia">
+        <span class="raia-n" aria-hidden="true">4</span>
+        <svg class="raia-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18M5.7 5.7c3 3.2 3 9.4 0 12.6M18.3 5.7c-3 3.2-3 9.4 0 12.6"/></svg>
+        <div class="raia-txt">
+          <h3>Basquete</h3>
+          <p>Escolinha de esportes.</p>
+        </div>
+        <p class="raia-onde"><b>Onde</b> Ginásio do Complexo</p>
+        <a class="raia-ir" href="https://wa.me/message/5R76JUZZV2YIP1" data-zap target="_blank" rel="noopener" aria-label="Agendar aula experimental de basquete">Agendar <span aria-hidden="true">&rarr;</span></a>
+      </li>
+
+      <li class="raia">
+        <span class="raia-n" aria-hidden="true">5</span>
+        <svg class="raia-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l5 14.5H7z"/><path d="M3.5 20.5h17M9.3 11.5h5.4"/></svg>
+        <div class="raia-txt">
+          <h3>Funcional Kids</h3>
+          <p>Agitação Funcional: turmas de treinamento funcional para crianças e adultos.</p>
+        </div>
+        <p class="raia-onde"><b>Onde</b> Complexo Agitação Esportes</p>
+        <a class="raia-ir" href="https://wa.me/message/5R76JUZZV2YIP1" data-zap target="_blank" rel="noopener" aria-label="Agendar aula experimental de funcional">Agendar <span aria-hidden="true">&rarr;</span></a>
+      </li>
+
+      <li class="raia">
+        <span class="raia-n" aria-hidden="true">6</span>
+        <svg class="raia-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3.5h8V10a4 4 0 0 1-8 0z"/><path d="M8 5.5H4v2a4 4 0 0 0 4 4M16 5.5h4v2a4 4 0 0 1-4 4M12 14v4.5M8 20.5h8"/></svg>
+        <div class="raia-txt">
+          <h3>Eventos Esportivos</h3>
+          <p>Organização de eventos esportivos.</p>
+        </div>
+        <p class="raia-onde"><b>Onde</b> Ginásio do Complexo e outros locais</p>
+        <a class="raia-ir" href="#eventos">Ver eventos <span aria-hidden="true">&rarr;</span></a>
+      </li>
+
+      <li class="raia">
+        <span class="raia-n" aria-hidden="true">7</span>
+        <svg class="raia-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="16" r="4.5"/><path d="M11.3 12.7L20.5 3.5M16 8l3 3M13.5 10.5l2 2"/></svg>
+        <div class="raia-txt">
+          <h3>Aluguel</h3>
+          <p>Ginásio disponível para aluguel.</p>
+        </div>
+        <p class="raia-onde"><b>Onde</b> Ginásio do Complexo</p>
+        <a class="raia-ir" href="https://wa.me/message/5R76JUZZV2YIP1" data-zap target="_blank" rel="noopener" aria-label="Consultar o aluguel do ginásio">Consultar <span aria-hidden="true">&rarr;</span></a>
+      </li>
+    </ol>
+  </div>
+
+  <div class="ondas ondas-noite" aria-hidden="true"><i class="onda onda-c"></i><i class="onda onda-b"></i><i class="onda onda-e"></i><i class="onda onda-a"></i></div>
+</section>
+
+<!-- ============================ UNIDADES ============================ -->
+<section class="secao secao-escura" id="unidades">
+  <div class="agua-luzes agua-luzes-suave" aria-hidden="true"><i class="luz luz-1"></i></div>
+  <div class="container">
+    <p class="etiqueta">Unidades</p>
+    <h2>Três endereços em Aracaju.</h2>
+    <p class="secao-sub">Natação nas três unidades. Ginásio e funcional no Complexo.</p>
+
+    <div class="unidades">
+      <article class="unidade unidade-grande">
+        <div class="unidade-txt">
+          <ul class="selos"><li>Natação</li><li>Ginásio</li><li>Funcional</li></ul>
+          <h3>Complexo Agitação Esportes</h3>
+          <address>Rua Riachuelo, 418 - São José<br>Aracaju/SE</address>
+          <a class="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Riachuelo%2C%20418%20-%20S%C3%A3o%20Jos%C3%A9%20-%20Aracaju%2FSE" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mapa"/></svg>
+            Abrir no Google Maps
+          </a>
+        </div>
+        <div class="fotos">
+          <figure class="foto"><img src="img/foto-complexo.png" width="170" height="95" loading="lazy" alt="Piscina do Complexo Agitação Esportes, com as raias marcadas no fundo"><figcaption>Natação</figcaption></figure>
+          <figure class="foto"><img src="img/foto-ginasio.png" width="170" height="95" loading="lazy" alt="Quadra vermelha do Ginásio do Complexo"><figcaption>Ginásio</figcaption></figure>
+          <figure class="foto"><img src="img/foto-funcional.png" width="170" height="95" loading="lazy" alt="Sala do Agitação Funcional, com cones e arcos coloridos no piso"><figcaption>Funcional</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="unidade">
+        <figure class="foto"><img src="img/foto-iate.png" width="170" height="95" loading="lazy" alt="Piscina da Agitação no Iate Clube de Aracaju"></figure>
+        <div class="unidade-txt">
+          <ul class="selos"><li>Natação</li></ul>
+          <h3>Agitação - Iate Clube de Aracaju</h3>
+          <address>Av. Beira Mar, s/n - 13 de Julho<br>Aracaju/SE</address>
+          <a class="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=Iate%20Clube%20de%20Aracaju%2C%20Av.%20Beira%20Mar%2C%20s%2Fn%20-%2013%20de%20Julho%20-%20Aracaju%2FSE" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mapa"/></svg>
+            Abrir no Google Maps
+          </a>
+        </div>
+      </article>
+
+      <article class="unidade">
+        <figure class="foto"><img src="img/foto-adebe.png" width="170" height="95" loading="lazy" alt="Piscina da Agitação na ADEBE/Clube da Energisa"></figure>
+        <div class="unidade-txt">
+          <ul class="selos"><li>Natação</li></ul>
+          <h3>Agitação - ADEBE/Clube da Energisa</h3>
+          <address>Rua Euclides Goes, 526, Coroa do Meio<br>Aracaju/SE</address>
+          <a class="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Euclides%20Goes%2C%20526%2C%20Coroa%20do%20Meio%20-%20Aracaju%2FSE" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mapa"/></svg>
+            Abrir no Google Maps
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="ondas ondas-claro" aria-hidden="true"><i class="onda onda-c"></i><i class="onda onda-b"></i><i class="onda onda-e"></i><i class="onda onda-a"></i></div>
+</section>
+
+<div class="faixa-clara">
+
+<!-- ============================= EVENTOS ============================ -->
+<section class="secao secao-clara" id="eventos">
+  <div class="container">
+    <p class="etiqueta">Eventos</p>
+    <h2>A gente também organiza o jogo.</h2>
+    <p class="secao-sub">A Agitação organiza eventos esportivos dentro e fora de Sergipe.</p>
+
+    <!-- Os cartoes saem do Gestor ao vivo (api/eventos.json), com data/eventos.json como reserva.
+         Sem nenhum dos dois o bloco inteiro fica escondido: nada de lista vazia. -->
+    <div class="proximos" id="proximos" hidden>
+      <h3 class="proximos-tit">Próximos eventos</h3>
+      <div class="provas" id="provasCards"></div>
+    </div>
+
+    <div class="eventos">
+      <article class="evento evento-destaque">
+        <img src="img/evento-copa-futsal.png" width="184" height="94" loading="lazy" alt="Marca da Copa TV Sergipe de Futsal: realização TV Sergipe, organização Agitação Esportes">
+        <div class="evento-txt">
+          <h3>Copa TV Sergipe de Futsal 2026</h3>
+          <p>Realização TV Sergipe, organização Agitação.</p>
+          <a class="ir" href="https://www.agitacaoesportes.com.br/copatvsergipefutsal.html" target="_blank" rel="noopener">Ver a página da Copa <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <p class="campea">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3.5h8V10a4 4 0 0 1-8 0z"/><path d="M8 5.5H4v2a4 4 0 0 0 4 4M16 5.5h4v2a4 4 0 0 1-4 4M12 14v4.5M8 20.5h8"/></svg>
+          <span><small>Equipe campeã 2026</small><b>Confiança/Traipu</b></span>
+        </p>
+      </article>
+
+      <article class="evento evento-marca">
+        <img src="img/evento-magistratura.png" width="179" height="90" loading="lazy" alt="Marca dos XI Jogos Nacionais da Magistratura, Maceió 2025">
+        <div class="evento-txt">
+          <h3>XI Jogos Nacionais da Magistratura</h3>
+          <p>Maceió/AL, 2025.</p>
+          <a class="ir" href="https://www.agitacaoesportes.com.br/jogosdamagistratura.html" target="_blank" rel="noopener">Ver a página dos Jogos <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+
+      <article class="evento evento-agua">
+        <svg class="evento-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13.5" r="8"/><path d="M12 9v4.5l3 2M9.5 2.5h5M12 2.5v3M18.2 6.8l1.3-1.3"/></svg>
+        <div class="evento-txt">
+          <h3>Resultados</h3>
+          <p>Natação ONJF, I e II etapa, e Pesca.</p>
+          <a class="ir" href="https://www.agitacaoesportes.com.br/eventos.html" target="_blank" rel="noopener">Ver os resultados <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+
+      <article class="evento evento-violeta">
+        <svg class="evento-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4c6.5 4 13.5 4 20 0"/><path d="M4.5 5.4L7 17l2.5-10.5M9.8 6.8L12 18.5l2.2-11.7M14.5 6.5L17 17l2.5-11.6"/></svg>
+        <div class="evento-txt">
+          <h3>Arraiá Agitação</h3>
+          <p>Os destaques estão no Instagram.</p>
+          <a class="ir" href="https://www.instagram.com/agitacao/" target="_blank" rel="noopener">Ver no Instagram <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== BLOG ============================= -->
+<!-- Os cartoes saem de data/blog.json, gravado pelo Gestor em Cadastros > Blog do site >
+     PUBLICAR NO SITE. Sem o arquivo a secao nao aparece: o site continua funcionando. -->
+<section class="secao secao-clara secao-blog" id="blog" hidden>
+  <div class="container">
+    <p class="etiqueta">Blog</p>
+    <h2>O que está acontecendo.</h2>
+    <p class="secao-sub">Novidades, resultados e bastidores da Agitação.</p>
+
+    <div class="posts" id="blogCards"></div>
+
+    <div class="blog-mais">
+      <a class="btn btn-noite" href="blog.html">Ver todos os posts</a>
+    </div>
+  </div>
+</section>
+
+  <div class="ondas ondas-violeta" aria-hidden="true"><i class="onda onda-c"></i><i class="onda onda-b"></i><i class="onda onda-e"></i><i class="onda onda-a"></i></div>
+</div>
+
+<!-- ======================== AULA EXPERIMENTAL ======================= -->
+<section class="aula" id="aula">
+  <div class="aula-aneis" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="container aula-in">
+    <p class="etiqueta">Aula experimental</p>
+    <h2>Venha dar o primeiro mergulho.</h2>
+    <p class="aula-sub">Agende sua <b>aula experimental</b> pela Central de Atendimento WhatsApp.</p>
+    <a class="btn btn-branco btn-grande" href="https://wa.me/message/5R76JUZZV2YIP1" data-zap target="_blank" rel="noopener">
+      <svg class="ico-zap" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-zap"/></svg>
+      Chamar no WhatsApp
+    </a>
+    <p class="aula-fone">(79) 98866-9367</p>
+  </div>
+
+  <div class="ondas ondas-noite2" aria-hidden="true"><i class="onda onda-c"></i><i class="onda onda-b"></i><i class="onda onda-e"></i><i class="onda onda-a"></i></div>
+</section>
+
+<!-- ============================== REDES ============================= -->
+<section class="secao secao-redes" id="redes">
+  <div class="container">
+    <p class="etiqueta">Redes</p>
+    <h2>A Agitação fora d’água.</h2>
+
+    <div class="redes">
+      <a class="rede" href="https://www.instagram.com/agitacao/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" class="linha" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="cheio"/></svg>
+        <span><b>Instagram</b><small>@agitacao</small></span>
+      </a>
+      <a class="rede" href="https://www.facebook.com/agitacaoesportes" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        <span><b>Facebook</b><small>/agitacaoesportes</small></span>
+      </a>
+      <a class="rede" href="https://www.youtube.com/@agitacaoesportes" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        <span><b>YouTube</b><small>@agitacaoesportes</small></span>
+      </a>
+      <a class="rede" href="https://docs.google.com/forms/d/e/1FAIpQLSf31qQYcELjXD9Q5kN_hSxJhO3O8_9iBSmivkudpF2f_ewegQ/viewform?usp=pp_url" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" class="linha" aria-hidden="true"><rect x="3" y="7.5" width="18" height="12.5" rx="2.5"/><path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5M3 13h18"/></svg>
+        <span><b>Trabalhe conosco</b><small>Preencha o formulário</small></span>
+      </a>
+    </div>
+
+    <p class="ja-aluno">
+      <span>Já é aluno?</span>
+      <a class="btn btn-vazado" href="https://tecnofitacademia.page.link/App" data-area-aluno target="_blank" rel="noopener">Área do aluno</a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================== RODAPÉ ============================ -->
+<footer class="rodape">
+  <i class="corda-rodape" aria-hidden="true"></i>
+  <div class="container rodape-in">
+    <div class="rodape-marca">
+      <img src="img/logo-branca.png" alt="Agitação Esportes" width="181" height="91" loading="lazy">
+      <p class="desde">Desde 1994</p>
+      <p>Aracaju - Sergipe - Brasil</p>
+    </div>
+    <nav class="rodape-menu" aria-label="Rodapé">
+      <a href="#modalidades">Modalidades</a>
+      <a href="#unidades">Unidades</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#blog" data-com-blog hidden>Blog</a>
+      <a href="#aula">Aula experimental</a>
+      <a href="https://tecnofitacademia.page.link/App" data-area-aluno target="_blank" rel="noopener">Área do aluno</a>
+    </nav>
+    <div class="rodape-contato">
+      <p>Central de Atendimento WhatsApp</p>
+      <a class="rodape-fone" href="https://wa.me/message/5R76JUZZV2YIP1" data-zap target="_blank" rel="noopener">(79) 98866-9367</a>
+    </div>
+  </div>
+  <div class="container rodape-fim">
+    <p>© 1994-<span id="ano">2026</span> Agitação Esportes</p>
+    <p>Site desenvolvido pela <a href="https://imsoft.com.br" target="_blank" rel="noopener">ImSoft</a></p>
+  </div>
+</footer>
+
+<a class="zap-flutuante" href="https://wa.me/message/5R76JUZZV2YIP1" data-zap target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-zap"/></svg>
+</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></symbol>
+  <symbol id="i-mapa" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+</svg>
+
+<script src="js/site.js?v=10"></script>
+</body>
+</html>
