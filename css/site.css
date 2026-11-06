@@ -751,14 +751,11 @@ a { color: inherit; }
 .anima { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s cubic-bezier(.2, .7, .2, 1); transition-delay: var(--atraso, 0ms); }
 .anima.visivel { opacity: 1; transform: none; }
 
+/* Muita gente tem "reduzir movimento" ligado sem saber (no Windows, "Efeitos de animação" desligado; no celular, modo
+   economia). Parar tudo deixava o site morto para essas pessoas: a água lenta fica, sai só o que salta na tela. */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-  .anima { opacity: 1; transform: none; }
-  .boia-eco { opacity: 0; }
-  .aula-aneis i { opacity: .5; }
-  .aula-aneis i:nth-child(1) { transform: scale(.3); }
-  .aula-aneis i:nth-child(2) { transform: scale(.5); }
-  .aula-aneis i:nth-child(3) { transform: scale(.72); }
-  .aula-aneis i:nth-child(4) { transform: scale(.95); }
+  .anima { opacity: 1; transform: none; transition: none; }
+  .hero-txt > *, .boia { animation: none; }
+  *, *::before, *::after { transition: none !important; }
 }
